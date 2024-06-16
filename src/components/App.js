@@ -12,7 +12,8 @@ const App = () => {
   
   return (
     <div>
-      <input type="text" onChange={(e) => onNameChangeHandler(e)} />
+      <label htmlFor="inputTag">Enter your Name:</label>
+      <input type="text" id = "inputTag" onChange={(e) => onNameChangeHandler(e)} />
       {firstName && <p>Hello {firstName}!</p>}
     </div>
   )
