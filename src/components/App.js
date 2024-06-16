@@ -3,9 +3,17 @@ import React from "react";
 import './../styles/App.css';
 
 const App = () => {
+  const [firstName, setFirstName] = useState(null);
+  
+  function onNameChangeHandler(e) {
+    const { value } = e.target;
+    setFirstName(value);
+  }
+  
   return (
     <div>
-        {/* Do not remove the main div */}
+      <input type="text" onChange={(e) => onNameChangeHandler(e)} />
+      {firstName && <p>Hello {firstName}!</p>}
     </div>
   )
 }
